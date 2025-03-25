@@ -1,4 +1,4 @@
-package main.java.StrategyPattern.DriveStrategy;
+package main.java.DriveStrategy;
 
 public class SportsDriveStrategy implements DriveStrategy {
     public void drive() {

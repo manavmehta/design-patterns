@@ -1,6 +1,6 @@
-package main.java.StrategyPattern.Vehicle;
+package main.java.Vehicle;
 
-import main.java.StrategyPattern.DriveStrategy.DriveStrategy;
+import main.java.DriveStrategy.DriveStrategy;
 
 public class Vehicle {
     private final DriveStrategy strategy;
