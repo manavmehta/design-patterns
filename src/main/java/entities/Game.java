@@ -11,8 +11,8 @@ public class Game {
         System.out.print("Enter board size: ");
         int size = new Scanner(System.in).nextInt();
         board = new Board(size);
-        players.add(new Player(new PieceO()));
         players.add(new Player(new PieceX()));
+        players.add(new Player(new PieceO()));
         playGame();
     }
 
@@ -21,7 +21,6 @@ public class Game {
         while (!gameEnded) {
             board.printBoard();
             if (board.filledCells == board.board.length * board.board.length) {
-                gameEnded = true;
                 System.out.println("It's a draw!");
                 break;
             }
@@ -29,12 +28,12 @@ public class Game {
             System.out.print("Make a move: ");
             int i = new Scanner(System.in).nextInt();
             int j = new Scanner(System.in).nextInt();
-            if (!addPiece(playerOnTurn.piece, i, j)){
+            if (!board.addPiece(playerOnTurn.piece, i, j)){
                 System.out.println("Invalid move. Try again.");
                 players.addFirst(playerOnTurn);
             }
             else {
-                if (board.isGameWon(playerOnTurn.piece)) {
+                if (board.isGameWon(playerOnTurn.piece, i, j)) {
                     gameEnded = true;
                     System.out.println(playerOnTurn.piece.pieceType + " wins!");
                 }
@@ -43,12 +42,4 @@ public class Game {
         }
     }
 
-    boolean addPiece(Piece piece, int i, int j){
-        if (board.board[i][j]!=null){
-            return false;
-        }
-        board.board[i][j] = piece;
-        board.filledCells++;
-        return true;
-    }
 }
