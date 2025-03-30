@@ -1,5 +1,7 @@
 package ExpressionEvaluator.entities;
 
+import ExpressionEvaluator.exceptions.DivisionByZeroException;
+
 public interface ArithmeticExpression {
-    int evaluate();
+    int evaluate() throws DivisionByZeroException;
 }

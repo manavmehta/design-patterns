@@ -1,12 +1,20 @@
 package ExpressionEvaluator.entities;
 
+import ExpressionEvaluator.exceptions.DivisionByZeroException;
+
 public class Expression implements ArithmeticExpression{
     ArithmeticExpression left;
     ArithmeticExpression right;
     Operation operation;
 
+    public Expression(ArithmeticExpression left, ArithmeticExpression right, Operation operation) {
+        this.left = left;
+        this.right = right;
+        this.operation = operation;
+    }
+
     @Override
-    public int evaluate() {
+    public int evaluate() throws DivisionByZeroException {
         switch (operation) {
             case ADD:
                 return left.evaluate() + right.evaluate();
@@ -18,7 +26,7 @@ public class Expression implements ArithmeticExpression{
                 if (right.evaluate() != 0){
                     return left.evaluate() / right.evaluate();
                 } else {
-                    throw new IllegalArgumentException("Division by zero");
+                    throw new DivisionByZeroException();
                 }
             default:
                 return 0;
