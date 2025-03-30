@@ -1,4 +1,4 @@
-package entities;
+package fileSystem.entities;
 
 public class File implements FileSystemEntity{
     public String name;

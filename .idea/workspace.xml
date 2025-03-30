@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d27f3d9b-be59-4442-a98d-cb4349bcb721" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Directory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/File.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/FileSystemEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/FileSystemTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fileSystem/entities/Directory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fileSystem/entities/File.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/FileSystemEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fileSystem/entities/FileSystemEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -38,6 +39,7 @@
   "keyToString": {
     "Application.Main (1).executor": "Run",
     "Application.Main.executor": "Run",
+    "JUnit.FileSystemTest.ls.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "composite",
@@ -53,7 +55,7 @@
       <recent name="entities" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="JUnit.FileSystemTest.ls">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="design-patterns" />
@@ -74,8 +76,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FileSystemTest.ls" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="design-patterns" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FileSystemTest" />
+      <option name="METHOD_NAME" value="ls" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileSystemTest.ls" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
