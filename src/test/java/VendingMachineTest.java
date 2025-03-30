@@ -10,6 +10,7 @@ import java.util.List;
 
 import static entitites.ItemType.COCA_COLA;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class VendingMachineTest {
     private VendingMachine machine;
@@ -24,8 +25,8 @@ public class VendingMachineTest {
 
         cocaCola = (new ItemShelf(101, new Item(COCA_COLA, 40), 2));
         biscuits = (new ItemShelf(102, new Item(ItemType.BISCUITS, 10), 1));
-        juice = (new ItemShelf(102, new Item(ItemType.JUICE, 20), 2));
-        seeds = (new ItemShelf(102, new Item(ItemType.SEEDS, 50), 0));
+        juice = (new ItemShelf(103, new Item(ItemType.JUICE, 20), 2));
+        seeds = (new ItemShelf(104, new Item(ItemType.SEEDS, 50), 0));
 
         machine.inventory.initInventory(List.of(cocaCola, biscuits, juice, seeds));
     }
@@ -53,5 +54,13 @@ public class VendingMachineTest {
         assertEquals(product, cocaCola.item);
 
         assertEquals(machine.state.getClass(), IdleState.class);
+    }
+
+    @Test
+    public void productUnavailable() throws Exception {
+        machine.state.clickInsertNoteButton(this.machine);
+        machine.state.insertNote(machine, Note.TWENTY);
+        machine.state.clickSelectProductButton(this.machine);
+        assertThrows(Exception.class, () -> machine.state.chooseProduct(machine, 104));
     }
 }
