@@ -5,15 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d27f3d9b-be59-4442-a98d-cb4349bcb721" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitites/Inventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitites/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitites/ItemShelf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitites/ItemType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitites/Note.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitites/VendingMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/states/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/states/impl/DispenseState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/states/impl/IdleState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/states/impl/InputNotesStage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/states/impl/SelectionState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Kotlin Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,19 +48,28 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.VendingMachineTest.happyFlow.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "vending-machine",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/kmbl288083/repos/design-patterns"
+    "last_opened_file_path": "/Users/kmbl288083/repos/design-patterns",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.VendingMachineTest.happyFlow">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.java.Main" />
       <module name="src" />
@@ -55,8 +83,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VendingMachineTest.happyFlow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="design-patterns" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
+      <option name="METHOD_NAME" value="happyFlow" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VendingMachineTest.happyFlow" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>

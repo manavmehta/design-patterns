@@ -1,0 +1,12 @@
+states/impl/DispenseState.class
+Main.class
+entitites/Item.class
+entitites/VendingMachine.class
+states/impl/InputNotesStage.class
+entitites/Inventory.class
+states/State.class
+entitites/ItemShelf.class
+states/impl/IdleState.class
+entitites/Note.class
+states/impl/SelectionState.class
+entitites/ItemType.class
