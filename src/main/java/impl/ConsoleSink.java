@@ -1,8 +1,8 @@
-package impl;
+package main.java.impl;
 
-import entities.LogLevel;
-import entities.LogMessage;
-import entities.Sink;
+import main.java.entities.LogLevel;
+import main.java.entities.LogMessage;
+import main.java.entities.Sink;
 
 public class ConsoleSink implements Sink {
     LogLevel cutoffLogLevel;
@@ -13,7 +13,7 @@ public class ConsoleSink implements Sink {
     @Override
     public void write(LogMessage message) {
         var logLevelComparison = message.level.compareTo(cutoffLogLevel);
-        if (logLevelComparison == 0){
+        if (logLevelComparison >= 0){
             System.out.println(message.getLog());
         }
     }

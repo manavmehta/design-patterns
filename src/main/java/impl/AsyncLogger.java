@@ -1,6 +1,7 @@
-package impl;
+package main.java.impl;
 
-import entities.*;
+
+import main.java.entities.*;
 
 import java.time.LocalDateTime;
 import java.util.Deque;

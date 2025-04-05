@@ -1,8 +1,8 @@
-package impl;
+package main.java.impl;
 
-import entities.LogLevel;
-import entities.LogMessage;
-import entities.Sink;
+import main.java.entities.LogLevel;
+import main.java.entities.LogMessage;
+import main.java.entities.Sink;
 
 import java.io.File;  // Import the File class
 import java.io.FileWriter;

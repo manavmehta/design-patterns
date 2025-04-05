@@ -1,8 +1,13 @@
-import entities.*;
-import factory.LoggerFactory;
-import impl.AsyncLogger;
-import impl.ConsoleSink;
-import impl.FileSink;
+package main.java;
+
+import main.java.entities.LogLevel;
+import main.java.entities.LoggerConfig;
+import main.java.entities.LoggerType;
+import main.java.entities.Sink;
+import main.java.factory.LoggerFactory;
+import main.java.impl.AsyncLogger;
+import main.java.impl.ConsoleSink;
+import main.java.impl.FileSink;
 
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -14,8 +19,9 @@ public class Main {
 
     public static void sync(){
         var factory = new LoggerFactory();
-        List<Sink> sinks = List.of(new FileSink(LogLevel.ERROR, "/Users/manavmehta/logger/0.log"));
-        var config = new LoggerConfig("testLogger", sinks, DateTimeFormatter.ISO_DATE_TIME, 2, LoggerType.ASYNC);
+        var cwd = System.getProperty("user.dir");
+        List<Sink> sinks = List.of(new ConsoleSink(LogLevel.INFO));
+        var config = new LoggerConfig("testLogger", sinks, DateTimeFormatter.ISO_DATE_TIME, 2, LoggerType.SYNC);
         var logger = factory.getLogger(config);
         logger.info("info1");
         logger.info("info2");

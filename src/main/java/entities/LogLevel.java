@@ -1,4 +1,4 @@
-package entities;
+package main.java.entities;
 
 public enum LogLevel {
     DEBUG(1),
@@ -7,7 +7,7 @@ public enum LogLevel {
     ERROR(4),
     FATAL(5);
 
-    int level;
+    final int level;
 
     LogLevel(int level){
         this.level = level;

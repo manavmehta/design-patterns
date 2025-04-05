@@ -1,10 +1,11 @@
-package factory;
+package main.java.factory;
 
-import entities.LoggerConfig;
-import impl.AsyncLogger;
-import entities.Logger;
-import entities.LoggerType;
-import impl.SyncLogger;
+
+import main.java.entities.Logger;
+import main.java.entities.LoggerConfig;
+import main.java.entities.LoggerType;
+import main.java.impl.AsyncLogger;
+import main.java.impl.SyncLogger;
 
 public class LoggerFactory {
 
