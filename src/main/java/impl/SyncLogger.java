@@ -14,7 +14,7 @@ public class SyncLogger implements Logger {
         logSinks = config.sinks;
     }
 
-    public void writeToSinks(LogMessage message){
+    public synchronized void writeToSinks(LogMessage message){
         for (var sink: logSinks){
             sink.write(message);
         }

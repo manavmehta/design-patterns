@@ -8,7 +8,6 @@ import java.io.File;  // Import the File class
 import java.io.FileWriter;
 import java.io.IOException;
 
-
 public class FileSink implements Sink {
     String filePath;
     LogLevel cutoffLogLevel;
@@ -29,20 +28,17 @@ public class FileSink implements Sink {
     }
 
     @Override
-    public void write(LogMessage message) {
+    public synchronized void write(LogMessage message) {  // Synchronized method
         createFileIfDoesntExist();
-        try{
-            var fileWriter = new FileWriter(filePath);
-            fileWriter.write(message.getLog());
-            fileWriter.close();
-        }
-        catch (Exception e){
+        try (var fileWriter = new FileWriter(filePath, true)) {  // Enable append mode and use try-with-resources
+            fileWriter.write(message.getLog() + System.lineSeparator());
+        } catch (Exception e) {
             System.out.println("Could not write to file " + filePath);
         }
     }
 
     @Override
     public void clear() {
-
+        // Implementation for clearing the log file if needed
     }
 }
