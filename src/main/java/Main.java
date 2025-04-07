@@ -1,6 +1,8 @@
+import abstracts.Sink;
 import entities.*;
+import enums.LogLevel;
+import enums.LoggerType;
 import factory.LoggerFactory;
-import impl.AsyncLogger;
 import impl.ConsoleSink;
 import impl.FileSink;
 

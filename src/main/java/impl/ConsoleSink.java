@@ -1,8 +1,8 @@
 package impl;
 
-import entities.LogLevel;
+import enums.LogLevel;
 import entities.LogMessage;
-import entities.Sink;
+import abstracts.Sink;
 
 public class ConsoleSink implements Sink {
     LogLevel cutoffLogLevel;

@@ -1,6 +1,6 @@
 package entities;
 
-import java.time.LocalDateTime;
+import enums.LogLevel;
 
 public class LogMessage {
     public String timestamp;

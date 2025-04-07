@@ -1,6 +1,9 @@
 package impl;
 
+import abstracts.Logger;
+import abstracts.Sink;
 import entities.*;
+import enums.LogLevel;
 
 import java.time.LocalDateTime;
 import java.util.List;

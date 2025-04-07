@@ -2,8 +2,8 @@ package factory;
 
 import entities.LoggerConfig;
 import impl.AsyncLogger;
-import entities.Logger;
-import entities.LoggerType;
+import abstracts.Logger;
+import enums.LoggerType;
 import impl.SyncLogger;
 
 public class LoggerFactory {

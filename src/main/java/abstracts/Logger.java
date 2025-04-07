@@ -1,4 +1,4 @@
-package entities;
+package abstracts;
 
 public interface Logger {
     void debug(String logMessage);

@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d27f3d9b-be59-4442-a98d-cb4349bcb721" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/LogLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/enums/LogLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/LogMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/LogMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/abstracts/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/LoggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/LoggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/LoggerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/enums/LoggerType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Sink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/abstracts/Sink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factory/LoggerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/LoggerFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/impl/AsyncLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/impl/AsyncLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/impl/ConsoleSink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/impl/ConsoleSink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/impl/FileSink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/impl/FileSink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/impl/SyncLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/impl/SyncLogger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,22 +81,22 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/impl/AsyncLogger.java</url>
-          <line>32</line>
+          <line>34</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/impl/AsyncLogger.java</url>
-          <line>29</line>
+          <line>31</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/impl/AsyncLogger.java</url>
-          <line>28</line>
+          <line>30</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/impl/AsyncLogger.java</url>
-          <line>47</line>
+          <line>48</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
