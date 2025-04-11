@@ -1,5 +1,8 @@
 public class CinemaManager {
-    private static INSTANCE = new CinemaManager;
-
-
+    static CinemaManager INSTANCE = new CinemaManager();
+    private CinemaManager() {
+    }
+    public static CinemaManager getInstance() {
+        return INSTANCE;
+    }
 }
