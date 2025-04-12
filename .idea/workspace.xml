@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d27f3d9b-be59-4442-a98d-cb4349bcb721" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BookingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BookingManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Cinema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Cinema.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Screen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Show.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Ticket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +44,7 @@
     "git-widget-placeholder": "bookmyshow",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/kmbl288083/repos/design-patterns",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -174,7 +171,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/BookingManager.java</url>
-          <line>99</line>
+          <line>96</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
