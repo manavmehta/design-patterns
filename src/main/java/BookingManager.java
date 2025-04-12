@@ -31,16 +31,16 @@ public class BookingManager {
                 .mapToObj(i -> new Screen(i, screenRow, screenColumn))
                 .collect(Collectors.toList());
 
-        Cinema cinema = new Cinema(cinemaId, screens);
+        var cinema = new Cinema(cinemaId, screens);
         cinemas.put(cinemaId, cinema);
 
         cinemasByCity.computeIfAbsent(cityId, _ -> new ArrayList<>()).add(cinemaId);
     }
 
     public void addShow(int showId, int movieId, int cinemaId, int screenId, long startTime, long endTime) {
-        Screen screen = cinemas.get(cinemaId).getScreens().get(screenId);
+        var screen = cinemas.get(cinemaId).getScreens().get(screenId);
 
-        Show show = new Show(showId, movieId, cinemaId, screen.getRows(), screen.getColumns(), screenId, startTime, endTime);
+        var show = new Show(showId, movieId, cinemaId, screen.getRows(), screen.getColumns(), screenId, startTime, endTime);
         shows.put(showId, show);
 
         showsByCinemaId.computeIfAbsent(cinemaId, _ -> new ArrayList<>()).add(showId);
@@ -67,7 +67,7 @@ public class BookingManager {
     }
 
     public List<Pair<Integer, Integer>> bookTicket(int ticketId, int showId, int ticketsCount) {
-        Show show = shows.get(showId);
+        var show = shows.get(showId);
         Ticket ticket = new Ticket(ticketId, showId, ticketsCount);
 
         List<Pair<Integer, Integer>> bookedSeats = ticketsCount <= show.getFreeSeats()
@@ -82,7 +82,7 @@ public class BookingManager {
     }
 
     public ArrayList<Pair<Integer, Integer>> bookSeatsInLine(Show show, int ticketsCount) {
-        boolean[][] seats = show.getSeats();
+        var seats = show.getSeats();
         int rows = show.getRows();
         int cols = show.getCols();
 
@@ -109,7 +109,7 @@ public class BookingManager {
     }
 
     public ArrayList<Pair<Integer, Integer>> getDisconnectedSeats(Show show, int ticketsCount) {
-        boolean[][] seats = show.getSeats();
+        var seats = show.getSeats();
         int rows = show.getRows();
         int cols = show.getCols();
 
@@ -139,7 +139,7 @@ public class BookingManager {
         Ticket ticket = tickets.get(ticketId);
         if (ticket == null || ticket.isCancelled()) return false;
 
-        Show show = shows.get(ticket.getShowId());
+        var show = shows.get(ticket.getShowId());
         for (Pair<Integer, Integer> seat : ticket.getSeats()) {
             show.getSeats()[seat.first()][seat.second()] = false;
         }
