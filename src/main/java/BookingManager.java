@@ -41,7 +41,7 @@ public class BookingManager {
 
     public void addShow(int showId, int movieId, int cinemaId, int screenId, long startTime, long endTime){
         var cinema = cinemas.get(cinemaId);
-        var screen = cinema.screens.get(screenId);
+        var screen = cinema.getScreens().get(screenId);
         shows.put(showId, new Show(showId, movieId, cinemaId, screen.rows, screen.columns, screenId, startTime, endTime));
         List<Integer> shows = showsByCinemaId.getOrDefault(cinemaId, new ArrayList<>());
         shows.add(showId);
@@ -56,7 +56,7 @@ public class BookingManager {
             var allShows = showsByCinemaId.getOrDefault(cinId, new ArrayList<>());
             for(var showId: allShows){
                 var show = shows.get(showId);
-                if (show.movieId==movieId){
+                if (show.getMovieId()==movieId){
                     selectedCinemas.add(cinId);
                 }
             }
@@ -69,7 +69,7 @@ public class BookingManager {
         var allShows = showsByCinemaId.getOrDefault(cinemaId, new ArrayList<>());
         for(var showId: allShows){
             var show = shows.get(showId);
-            if (show.movieId==movieId){
+            if (show.getMovieId()==movieId){
                 selectedShows.add(showId);
             }
         }
@@ -78,14 +78,14 @@ public class BookingManager {
 
     public int getFreeSeatsCount(int showId){
         var show = shows.get(showId);
-        return show.freeSeats;
+        return show.getFreeSeats();
     }
 
     public ArrayList<Pair<Integer, Integer>> bookTicket(int ticketId, int showId, int ticketsCount){
         var show = shows.get(showId);
         var ticket = new Ticket(ticketId, showId, ticketsCount);
         ArrayList<Pair<Integer, Integer>> bookedSeats = new ArrayList<>();
-        if (ticketsCount <= show.freeSeats){
+        if (ticketsCount <= show.getFreeSeats()){
             var seatsInLine = bookSeatsInLine(show, ticketsCount);
             if (!seatsInLine.isEmpty()) {
                 bookedSeats = seatsInLine;
@@ -96,17 +96,17 @@ public class BookingManager {
         }
         ticket.setSeats(bookedSeats);
         tickets.put(ticketId, ticket);
-        show.freeSeats -= bookedSeats.size();
+        show.setFreeSeats(show.getFreeSeats() - bookedSeats.size());
         return bookedSeats;
     }
 
     public ArrayList<Pair<Integer, Integer>> bookSeatsInLine(Show show, int ticketsCount){
         ArrayList<Pair<Integer, Integer>> bookedSeats = new ArrayList<>();
-        for (int i = 0; i < show.rows; i++){
+        for (int i = 0; i < show.getRows(); i++){
             int booked = 0;
             int j=0;
-            while(j < show.cols && booked < ticketsCount){
-                if (!show.seats[i][j]){
+            while(j < show.getCols() && booked < ticketsCount){
+                if (!show.getSeats()[i][j]){
                     booked++;
                     bookedSeats.add(new Pair<>(i, j));
                 }
@@ -125,11 +125,11 @@ public class BookingManager {
 
     public ArrayList<Pair<Integer, Integer>> getDisconnectedSeats(Show show, int ticketsCount){
         ArrayList<Pair<Integer, Integer>> bookedSeats = new ArrayList<>();
-        for (int i = 0; i < show.rows; i++){
+        for (int i = 0; i < show.getRows(); i++){
             int booked = 0;
             int j=0;
-            while(j < show.cols && booked < ticketsCount){
-                if (show.seats[i][j]){
+            while(j < show.getCols() && booked < ticketsCount){
+                if (show.getSeats()[i][j]){
                     booked++;
                     bookedSeats.add(new Pair<>(i, j));
                 }
@@ -143,16 +143,16 @@ public class BookingManager {
     }
 
     public boolean cancelTicket(int ticketId){
-        if (!tickets.containsKey(ticketId) || tickets.get(ticketId).cancelled) return false;
+        if (!tickets.containsKey(ticketId) || tickets.get(ticketId).isCancelled()) return false;
         var ticket = tickets.get(ticketId);
 
-        var show = shows.get(ticket.showId);
-        for (var seat: ticket.seats){
-            show.seats[seat.first()][seat.second()] = false;
+        var show = shows.get(ticket.getShowId());
+        for (var seat: ticket.getSeats()){
+            show.getSeats()[seat.first()][seat.second()] = false;
         }
 
-        show.freeSeats += ticket.seats.size();
-        ticket.cancelled = true;
+        show.setFreeSeats(show.getFreeSeats() + ticket.getSeats().size());
+        ticket.setCancelled(true);
         return true;
     }
 }

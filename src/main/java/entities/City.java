@@ -8,6 +8,6 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class City {
-    int id;
-    List<Integer> cinemaIds;
+    private int id;
+    private List<Integer> cinemaIds;
 }

@@ -1,23 +1,19 @@
 package entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.lang.reflect.GenericDeclaration;
-
 @Data
-//@AllArgsConstructor
 public class Show {
-    public int id;
-    public int movieId;
-    public int cinemaId;
-    public int rows;
-    public int cols;
-    public int screenIndex;
-    public long startTime;
-    public long endTime;
-    public boolean[][] seats;
-    public int freeSeats;
+    private int id;
+    private int movieId;
+    private int cinemaId;
+    private int rows;
+    private int cols;
+    private int screenIndex;
+    private long startTime;
+    private long endTime;
+    private boolean[][] seats;
+    private int freeSeats;
 
     public Show(int id, int movieId, int cinemaId, int rows, int cols, int screenIndex, long startTime, long endTime){
         this.id = id;

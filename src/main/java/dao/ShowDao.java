@@ -24,8 +24,8 @@ public class ShowDao {
         List<Integer> showsByCinemaAndMovie = new ArrayList<>();
         List<Show> allShows = shows.values().stream().toList();
         for (var show: allShows){
-            if (show.cinemaId == cinemaId && show.movieId==movieId){
-                showsByCinemaAndMovie.add(show.id);
+            if (show.getCinemaId() == cinemaId && show.getMovieId()==movieId){
+                showsByCinemaAndMovie.add(show.getId());
             }
         }
         return showsByCinemaAndMovie;
