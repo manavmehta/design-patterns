@@ -4,6 +4,7 @@ import manavmehta.bookingApp.dao.CinemaDao;
 import manavmehta.bookingApp.dao.ShowDao;
 import manavmehta.bookingApp.entities.Cinema;
 import manavmehta.bookingApp.entities.Screen;
+import manavmehta.bookingApp.entities.Show;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ public class CinemaService {
     CinemaDao cinemaDao;
 
     @Autowired
-    ShowDao showDao;
+    ShowService showService;
 
     public Cinema getCinema(int cinemaId){
         return cinemaDao.getCinemaById(cinemaId);
@@ -31,17 +32,27 @@ public class CinemaService {
 
         var cinema = new Cinema(cinemaId, screens);
         cinemaDao.addCinema(cinema);
-        return;
     }
 
     public List<Integer> listShows(int movieId, int cinemaId) {
         var allShowsByCinemaId = cinemaDao.getShowsByCinemaId(cinemaId);
         return allShowsByCinemaId.stream()
-                .filter(showId -> showDao.getShow(showId).getMovieId() == movieId)
+                .filter(showId -> showService.getShow(showId).getMovieId() == movieId)
                 .distinct()
                 .toList();
     }
-    public void addShow(int cinemaId, int showId) {
+    public void addShow(int showId, int movieId, int cinemaId, int screenId, long startTime, long endTime) {
+        var cinema = getCinema(cinemaId);
+        if (cinema == null) return;
+
         cinemaDao.addShow(cinemaId, showId);
+
+        var screens = cinema.getScreens();
+        if (screens == null) return;
+
+        var desiredScreen = screens.get(screenId);
+
+        var show = new Show(showId, movieId, cinemaId, desiredScreen.getRows(), desiredScreen.getColumns(), screenId, startTime, endTime);
+        showService.addShow(show);
     }
 }

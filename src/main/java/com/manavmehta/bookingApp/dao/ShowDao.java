@@ -22,6 +22,7 @@ public class ShowDao {
     public Show getShow(int showId){
         return shows.getOrDefault(showId, null);
     }
+
     public List<Integer> listShows(int cinemaId, int movieId){
         List<Integer> showsByCinemaAndMovie = new ArrayList<>();
         List<Show> allShows = shows.values().stream().toList();

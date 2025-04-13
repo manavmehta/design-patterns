@@ -53,8 +53,8 @@ public class BookingManagerTest {
     @Test
     void check(){
         cinemaService.addCinema(0, 1, 4,5, 10);
-        showService.addShow(1,4, 0, 1, 1710516108725L, 1710523308725L);
-        showService.addShow(2,11, 0, 3, 1710516108725L, 1710523308725L);
+        cinemaService.addShow(1,4, 0, 1, 1710516108725L, 1710523308725L);
+        cinemaService.addShow(2,11, 0, 3, 1710516108725L, 1710523308725L);
 
         assertTrue(cityService.listCinemas(0, 1).isEmpty());
         assertEquals(List.of(1), cinemaService.listShows(4, 0));
