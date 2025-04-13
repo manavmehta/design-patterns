@@ -1,4 +1,4 @@
-package entities;
+package manavmehta.bookingApp.entities;
 
 import lombok.Data;
 

@@ -1,7 +1,7 @@
-package entities;
+package manavmehta.bookingApp.entities;
 
-import dependencies.Pair;
 import lombok.Data;
+import manavmehta.bookingApp.dependencies.Pair;
 
 import java.util.List;
 

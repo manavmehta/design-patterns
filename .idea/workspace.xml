@@ -5,7 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d27f3d9b-be59-4442-a98d-cb4349bcb721" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/BookingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BookingManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design-patterns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/design-patterns.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BookingManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CinemaDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CityDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ShowDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dependencies/Pair.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Cinema.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/City.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Movie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Screen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Show.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Ticket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookingManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookingManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,20 +47,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BookingManagerTest.check.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.NoBookingTest.check.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;bookmyshow&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/kmbl288083/repos/design-patterns&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BookingApplication.executor": "Run",
+    "Application.Main.executor": "Run",
+    "JUnit.BookingManagerTest.check.executor": "Debug",
+    "JUnit.BookingManagerTest.executor": "Run",
+    "JUnit.NoBookingTest.check.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "bookmyshow",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/kmbl288083/repos/design-patterns",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -57,6 +75,19 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.BookingManagerTest.check">
+    <configuration name="BookingApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="manavmehta.bookingApp.BookingApplication" />
+      <module name="design-patterns" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="manavmehta.bookingApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.java.Main" />
       <module name="src" />
@@ -66,6 +97,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="design-patterns" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BookingManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,6 +184,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.BookingManagerTest.check" />
+        <item itemvalue="JUnit.BookingManagerTest" />
+        <item itemvalue="Application.BookingApplication" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -171,6 +213,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/BookingManager.java</url>
           <line>96</line>
           <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/BookingManagerTest.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/manavmehta/bookingApp/service/CinemaService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/manavmehta/bookingApp/dao/CinemaDao.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

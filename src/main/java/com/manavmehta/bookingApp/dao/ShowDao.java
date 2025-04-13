@@ -1,12 +1,14 @@
-package dao;
+package manavmehta.bookingApp.dao;
 
-import entities.Show;
+import manavmehta.bookingApp.entities.Show;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Component
 public class ShowDao {
     Map<Integer, Show> shows;
 
@@ -14,8 +16,8 @@ public class ShowDao {
         this.shows = new HashMap<>();
     }
 
-    public void addShow(int showId, int movieId, int cinemaId, int screenId, long startTime, long endTime){
-
+    public void addShow(Show show){
+        shows.put(show.getId(), show);
     }
     public Show getShow(int showId){
         return shows.getOrDefault(showId, null);
