@@ -1,7 +1,6 @@
 package manavmehta.bookingApp.service;
 
 import manavmehta.bookingApp.dao.CinemaDao;
-import manavmehta.bookingApp.dao.ShowDao;
 import manavmehta.bookingApp.entities.Cinema;
 import manavmehta.bookingApp.entities.Screen;
 import manavmehta.bookingApp.entities.Show;
