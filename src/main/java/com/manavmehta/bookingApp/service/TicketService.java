@@ -1,10 +1,10 @@
 package manavmehta.bookingApp.service;
 
 import manavmehta.bookingApp.dao.TicketDao;
-import manavmehta.bookingApp.dependencies.Pair;
 import manavmehta.bookingApp.entities.Show;
 import manavmehta.bookingApp.entities.Ticket;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -45,7 +45,7 @@ public class TicketService {
 
             for (int j = 0; j < cols && booked < ticketsCount; j++) {
                 if (!seats[i][j]) {
-                    temp.add(new Pair<>(i, j));
+                    temp.add(Pair.of(i, j));
                     booked++;
                 } else {
                     temp.clear();
@@ -72,7 +72,7 @@ public class TicketService {
 
             for (int j = 0; j < cols && booked < ticketsCount; j++) {
                 if (seats[i][j]) {
-                    temp.add(new Pair<>(i, j));
+                    temp.add(Pair.of(i, j));
                     booked++;
                 } else {
                     temp.clear();
@@ -94,7 +94,7 @@ public class TicketService {
 
         var show = showService.getShow(ticket.getShowId());
         for (Pair<Integer, Integer> seat : ticket.getSeats()) {
-            show.getSeats()[seat.first()][seat.second()] = false;
+            show.getSeats()[seat.getFirst()][seat.getSecond()] = false;
         }
 
         show.setFreeSeats(show.getFreeSeats() + ticket.getSeats().size());

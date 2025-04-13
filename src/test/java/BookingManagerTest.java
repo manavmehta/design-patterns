@@ -3,7 +3,6 @@ import manavmehta.bookingApp.dao.CinemaDao;
 import manavmehta.bookingApp.dao.CityDao;
 import manavmehta.bookingApp.dao.ShowDao;
 import manavmehta.bookingApp.dao.TicketDao;
-import manavmehta.bookingApp.dependencies.Pair;
 import manavmehta.bookingApp.service.CinemaService;
 import manavmehta.bookingApp.service.CityService;
 import manavmehta.bookingApp.service.ShowService;
@@ -12,6 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.util.Pair;
 
 import java.util.List;
 
@@ -62,7 +62,7 @@ public class BookingManagerTest {
 
         assertEquals(50, showService.getFreeSeatsCount(1));
         var ticket1Seats = ticketService.bookTicket(1, 1, 4);
-        assertEquals(List.of(new Pair<>(0, 0), new Pair<>(0, 1), new Pair<>(0, 2), new Pair<>(0, 3)), ticket1Seats);
+        assertEquals(List.of(Pair.of(0, 0), Pair.of(0, 1), Pair.of(0, 2), Pair.of(0, 3)), ticket1Seats);
 
         assertEquals(46, showService.getFreeSeatsCount(1));
         assertTrue(ticketService.cancelTicket(1));

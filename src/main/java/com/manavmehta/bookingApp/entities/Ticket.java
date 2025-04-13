@@ -1,7 +1,7 @@
 package manavmehta.bookingApp.entities;
 
 import lombok.Data;
-import manavmehta.bookingApp.dependencies.Pair;
+import org.springframework.data.util.Pair;
 
 import java.util.List;
 
