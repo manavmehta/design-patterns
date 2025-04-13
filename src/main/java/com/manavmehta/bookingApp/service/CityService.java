@@ -12,6 +12,9 @@ public class CityService {
     @Autowired
     CityDao cityDao;
 
+    @Autowired
+    CinemaService cinemaService;
+
     public void addCinema(int cityId, int cinemaId){
         cityDao.addCinema(cityId, cinemaId);
     }
@@ -21,6 +24,8 @@ public class CityService {
     }
 
     public List<Integer> listCinemas(int movieId, int cityId) {
-        return cityDao.listCinemas(movieId, cityId);
+        return cityDao.listCinemasByCityId(cityId).stream()
+                .filter(cinemaId -> !cinemaService.listShows(movieId, cinemaId).isEmpty())
+                .toList();
     }
 }

@@ -21,7 +21,6 @@ public class CinemaDao {
 
     public void addCinema(Cinema cinema){
         cinemas.put(cinema.getId(), cinema);
-        return;
     }
 
     public Cinema getCinemaById(int cinemaId){
@@ -36,6 +35,5 @@ public class CinemaDao {
         var shows = showsByCinemaId.getOrDefault(cinemaId, new ArrayList<>());
         shows.add(showId);
         showsByCinemaId.put(cinemaId, shows);
-        return;
     }
 }

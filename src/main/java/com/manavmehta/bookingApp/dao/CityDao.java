@@ -14,9 +14,6 @@ import java.util.Map;
 public class CityDao {
     Map<Integer, List<Integer>> cinemasByCity;
 
-    @Autowired
-    CinemaService cinemaService;
-
     public CityDao(){
         cinemasByCity = new HashMap<>();
     }
@@ -29,11 +26,5 @@ public class CityDao {
 
     public List<Integer> listCinemasByCityId(int cityId){
         return cinemasByCity.getOrDefault(cityId, new ArrayList<>());
-    }
-
-    public List<Integer> listCinemas(int movieId, int cityId) {
-        return cinemasByCity.getOrDefault(cityId, List.of()).stream()
-                .filter(cinemaId -> !cinemaService.listShows(movieId, cinemaId).isEmpty())
-                .toList();
     }
 }

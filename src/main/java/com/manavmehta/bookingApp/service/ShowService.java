@@ -33,7 +33,6 @@ public class ShowService {
         var show = new Show(showId, movieId, cinemaId, desiredScreen.getRows(), desiredScreen.getColumns(), screenId, startTime, endTime);
         showDao.addShow(show);
         cinemaService.addShow(cinemaId, showId);
-        return;
     }
 
 }

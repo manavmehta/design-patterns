@@ -5,23 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d27f3d9b-be59-4442-a98d-cb4349bcb721" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design-patterns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/design-patterns.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BookingManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CinemaDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CityDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ShowDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dependencies/Pair.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Cinema.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/City.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Movie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Screen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Show.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Ticket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BookingManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookingManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manavmehta/bookingApp/dao/CinemaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manavmehta/bookingApp/dao/CinemaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manavmehta/bookingApp/dao/CityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manavmehta/bookingApp/dao/CityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manavmehta/bookingApp/service/CinemaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manavmehta/bookingApp/service/CinemaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manavmehta/bookingApp/service/CityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manavmehta/bookingApp/service/CityService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +38,7 @@
   "keyToString": {
     "Application.BookingApplication.executor": "Run",
     "Application.Main.executor": "Run",
-    "JUnit.BookingManagerTest.check.executor": "Debug",
+    "JUnit.BookingManagerTest.check.executor": "Run",
     "JUnit.BookingManagerTest.executor": "Run",
     "JUnit.NoBookingTest.check.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -203,33 +190,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dao/CityDao.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/BookingManager.java</url>
-          <line>96</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/BookingManagerTest.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/manavmehta/bookingApp/service/CinemaService.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/manavmehta/bookingApp/dao/CinemaDao.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
 </project>
