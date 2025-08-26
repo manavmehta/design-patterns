@@ -19,6 +19,7 @@
 	<properties>
 		<java.version>21</java.version>
 		<kotlin.version>1.9.25</kotlin.version>
+		<spotless.version>2.43.0</spotless.version>
 	</properties>
 
 	<dependencies>
@@ -47,7 +48,7 @@
 			<version>${kotlin.version}</version>
 		</dependency>
 
-		<!-- Kotlin reflect (Spring needs this) -->
+		<!-- Kotlin reflect (needed by Spring) -->
 		<dependency>
 			<groupId>org.jetbrains.kotlin</groupId>
 			<artifactId>kotlin-reflect</artifactId>
@@ -64,6 +65,7 @@
 
 	<build>
 		<plugins>
+			<!-- Spring Boot plugin -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -77,17 +79,51 @@
 				<executions>
 					<execution>
 						<id>compile</id>
-						<goals><goal>compile</goal></goals>
+						<goals>
+							<goal>compile</goal>
+						</goals>
 					</execution>
 					<execution>
 						<id>test-compile</id>
-						<goals><goal>test-compile</goal></goals>
+						<goals>
+							<goal>test-compile</goal>
+						</goals>
 					</execution>
 				</executions>
 				<configuration>
 					<jvmTarget>${java.version}</jvmTarget>
 				</configuration>
 			</plugin>
+
+			<!-- Spotless plugin -->
+			<plugin>
+				<groupId>com.diffplug.spotless</groupId>
+				<artifactId>spotless-maven-plugin</artifactId>
+				<version>${spotless.version}</version>
+				<configuration>
+					<java>
+						<googleJavaFormat/>
+					</java>
+					<kotlin>
+						<ktfmt/>
+					</kotlin>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>apply</goal>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>diffplug-releases</id>
+			<url>https://plugins.gradle.org/m2/</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>

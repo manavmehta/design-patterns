@@ -5,37 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d27f3d9b-be59-4442-a98d-cb4349bcb721" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jetbrains_kotlin_stdlib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/LogLevel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/LogMessage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/LoggerConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/LoggerType.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Sink.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/factory/LoggerFactory.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/impl/AsyncLogger.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/impl/FileSink.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/impl/SyncLogger.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design-patterns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/design-patterns.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/LogLevel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/LogMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Logger.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/LoggerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/LoggerType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Sink.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/LoggerFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/impl/AsyncLogger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/impl/ConsoleSink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/impl/ConsoleSink.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/impl/FileSink.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/impl/SyncLogger.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,12 +100,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/factory/LoggerFactory.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/factory/LoggerFactory.kt</url>
           <line>12</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/factory/LoggerFactory.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/factory/LoggerFactory.kt</url>
           <line>13</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
