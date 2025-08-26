@@ -13,7 +13,7 @@ public class ConsoleSink implements Sink {
     @Override
     public void write(LogMessage message) {
         var logLevelComparison = message.level.compareTo(cutoffLogLevel);
-        if (logLevelComparison == 0){
+        if (logLevelComparison >= 0){
             System.out.println(message.getLog());
         }
     }

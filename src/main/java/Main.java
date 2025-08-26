@@ -12,10 +12,10 @@ public class Main {
         sync();
     }
 
-    public static void sync(){
+    public static void sync() {
         var factory = new LoggerFactory();
-        List<Sink> sinks = List.of(new FileSink(LogLevel.ERROR, "/Users/manavmehta/logger/0.log"));
-        var config = new LoggerConfig("testLogger", sinks, DateTimeFormatter.ISO_DATE_TIME, 2, LoggerType.ASYNC);
+        List<Sink> sinks = List.of(new ConsoleSink(LogLevel.INFO), new FileSink(LogLevel.ERROR, "/Users/manavmehta/logger/0.log"));
+        var config = new LoggerConfig("testLogger", sinks, DateTimeFormatter.ISO_DATE_TIME, 2, LoggerType.SYNC);
         var logger = factory.getLogger(config);
         logger.info("info1");
         logger.info("info2");
