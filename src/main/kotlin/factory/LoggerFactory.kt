@@ -7,10 +7,10 @@ import impl.AsyncLogger
 import impl.SyncLogger
 
 class LoggerFactory {
-    fun getLogger(config: LoggerConfig): Logger {
-        return when (config.loggerType) {
-            LoggerType.SYNC -> SyncLogger(config)
-            LoggerType.ASYNC -> AsyncLogger(config)
-        }
-    }
+	fun getLogger(config: LoggerConfig): Logger {
+		return when (config.loggerType) {
+			LoggerType.SYNC -> SyncLogger(config)
+			LoggerType.ASYNC -> AsyncLogger(config)
+		}
+	}
 }

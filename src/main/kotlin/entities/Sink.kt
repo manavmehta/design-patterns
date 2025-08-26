@@ -1,6 +1,7 @@
 package entities
 
 interface Sink {
-    fun write(message: LogMessage?)
-    fun clear()
+	fun write(message: LogMessage?)
+
+	fun clear()
 }

@@ -6,6 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="d27f3d9b-be59-4442-a98d-cb4349bcb721" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/entities/LogLevel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/entities/LogLevel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/entities/LogMessage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/entities/LogMessage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/entities/Logger.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/entities/Logger.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/entities/LoggerConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/entities/LoggerConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/entities/LoggerType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/entities/LoggerType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/entities/Sink.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/entities/Sink.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/factory/LoggerFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/factory/LoggerFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/impl/AsyncLogger.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/impl/AsyncLogger.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/impl/ConsoleSink.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/impl/ConsoleSink.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/impl/FileSink.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/impl/FileSink.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/impl/SyncLogger.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/impl/SyncLogger.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +53,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.sourceCode.Kotlin"
   }
 }]]></component>
   <component name="RecentsManager">
